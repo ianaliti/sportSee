@@ -11,23 +11,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  height: 80%;
+  gap: 25px;
+  height: 100%;
   justify-content: center;
 }
 .sidebar-span a {
-  background-color: #fff;
-  border: none;
-  border-radius: 8px;
   cursor: pointer;
-  height: 64px;
-  width: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .sidebar-span a:hover {
   background-color: #333;
+}
+.sidebar-span span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=SideBar.css.map */

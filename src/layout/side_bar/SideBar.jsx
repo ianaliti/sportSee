@@ -15,6 +15,7 @@ export default function SideBar() {
                 <Link><Button icon={swimming} /></Link>
                 <Link><Button icon={biking} /></Link>
                 <Link><Button icon={dummbell} /></Link>
+                <span>Copiryght, SportSee 2020</span>
             </div>
         </aside>
     )

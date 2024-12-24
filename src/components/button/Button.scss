@@ -1,0 +1,16 @@
+.button {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+
+    @media(max-width: 768px) {
+        width: 54px;
+        height: 54px;
+        margin-top: 60px;
+    }
+}
