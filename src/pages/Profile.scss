@@ -1,7 +1,20 @@
 .profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+
+    p {
+        margin: 45px 0;
+    }
+
+    .grid-charts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+     
+    @media (max-width: 768px) {
+        grid-template-columns: 60% 40%;
+    }
 }
