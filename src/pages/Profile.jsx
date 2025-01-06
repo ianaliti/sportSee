@@ -4,8 +4,9 @@ import { getAllUserData } from '../services/api';
 import { useParams } from 'react-router-dom';
 import AreaChartComponent from '../components/charts/AreaChart';
 import ScoreBar from '../components/score_bar/ScoreBar'
-import AverageTraining from '../components/average_training/AverageTraining';
-import TrainingScore from '../components/training_score/TrainingScore';
+import AverageTraining from '../components/sessions/UserSessions';
+import UserKPI from '../components/kpi/UserKPI';
+import UserPerfomance from '../components/perfomance/UserPerfomance';
 
 export default function Profile() {
 
@@ -30,7 +31,7 @@ export default function Profile() {
     if (error) return <div>Error: {error}</div>;
     if (!userData) return <div>Loading...</div>;
 
-    console.log(userData)
+    console.log(userData.mainData)
 
     return (
         <div className='profile'>
@@ -40,8 +41,9 @@ export default function Profile() {
                 <div>
                     <AreaChartComponent activity={userData.activity.sessions} />
                     <div className='grid-charts'>
-                        <AverageTraining sessions={userData.averageTraining.sessions} />
-                        <TrainingScore score={userData.mainData.score}/>
+                        <AverageTraining sessions={userData.sessions.sessions} />
+                        <UserPerfomance data={userData.perfomance.data} workoutTypes={userData.perfomance.kind} />
+                        <UserKPI score={userData.mainData.todayScore}/>
                     </div>
                 </div>
                 <div>

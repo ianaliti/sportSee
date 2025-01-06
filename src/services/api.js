@@ -13,22 +13,30 @@ export const fetchUserActivity = async (userId) => {
 }
 
 export const fetchUserAverageTraining = async (userId) => {
-    const userTraining = USER_AVERAGE_SESSIONS.find(user => user.userId === Number(userId));
-    if(!userTraining) throw new Error('User average training time not found');
-    return userTraining;
+    const sessions = USER_AVERAGE_SESSIONS.find(user => user.userId === Number(userId));
+    if(!sessions) throw new Error('User average training time not found');
+    return sessions;
+}
+
+export const fetchUserPerfomance = async (userId) => {
+    const perfomance = USER_PERFORMANCE.find(user => user.userId === Number(userId));
+    if(!perfomance) throw new Error('User perfomance not found');
+    return perfomance;
 }
 
 export const getAllUserData = async (userId) => {
     try {
-        const [mainData, activity, averageTraining] = await Promise.all([
+        const [mainData, activity, sessions, perfomance] = await Promise.all([
             fetchUserMainData(userId),
             fetchUserActivity(userId),
-            fetchUserAverageTraining(userId)
+            fetchUserAverageTraining(userId),
+            fetchUserPerfomance(userId)
         ])
         return {
             mainData,
             activity,
-            averageTraining
+            sessions,
+            perfomance
         }
     } catch (error) {
         throw error;

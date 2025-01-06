@@ -1,17 +1,15 @@
 import React from "react";
 import { LineChart, Line, XAxis } from "recharts";
-import './AverageTraining.css'
+import './UserSessions.css'
 
 
-export default function AverageTraining({ sessions }) {
-
-  console.log(sessions)
+export default function UserSessions({ sessions }) {
 
   return (
     <div className="averageTraining">
       <LineChart
-        width={300}
-        height={300}
+        width={258}
+        height={258}
         data={sessions}
       >
         <XAxis dataKey="day" />

@@ -6,6 +6,7 @@ import fat from '../../assets/icons_scorebar/fat.png'
 import protein from '../../assets/icons_scorebar/protein.png'
 
 export default function ScoreBar({ score }) {
+
   return (
     <div>
         <NutritionScore item={score.calorieCount} icon={calories} name="Calories"/>
