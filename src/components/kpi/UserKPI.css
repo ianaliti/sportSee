@@ -1,8 +1,40 @@
-.userKPI-background {
+.score-container {
   background-color: #FBFBFB;
+  position: relative;
+  max-width: 258px;
+  max-height: 258px;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border-radius: 5px;
 }
-.userKPI-background .text {
+@media (min-width: 1440px) {
+  .score-container {
+    max-width: 350px;
+  }
+}
+.score-container .score-label {
   position: absolute;
+  top: 24px;
+  left: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.score-container .score-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.score-container .score-text-container .score-percentage {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.score-container .score-text-container .score-subtitle {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=UserKPI.css.map */

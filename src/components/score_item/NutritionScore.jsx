@@ -1,12 +1,12 @@
 import React from 'react'
 import './NutritionScore.css'
 
-export default function ScoreItem({ item, icon, name }) {
+export default function ScoreItem({ item, icon, name, measure }) {
     return (
         <div className='card'>
             <img src={icon} alt="icon" />
             <div className='card-description'>
-                <h3>{item}</h3>
+                <h2>{item}{measure}</h2>
                 <p>{name}</p>
             </div>
 

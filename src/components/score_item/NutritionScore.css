@@ -12,6 +12,10 @@
 }
 .card .card-description {
   margin: 10px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  min-width: 120px;
 }
 
 /*# sourceMappingURL=NutritionScore.css.map */

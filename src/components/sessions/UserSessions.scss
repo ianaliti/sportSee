@@ -1,7 +1,16 @@
 .averageTraining {
     background-color: #FF0000;
-    margin: 15px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 258px;
+    max-height: 258px;
+    border-radius: 5px;
+
+    @media (min-width: 1440px) {
+        max-width: 350px;
+    }
 }

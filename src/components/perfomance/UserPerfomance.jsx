@@ -6,34 +6,34 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
+  ResponsiveContainer,
 } from "recharts";
 
 export default function UserPerfomance({ data, workoutTypes }) {
 
   const combineData = data.map(item => ({
     value: item.value,
-    kind: workoutTypes[item.kind]
+    kind: workoutTypes[item.kind].charAt(0).toUpperCase()+ workoutTypes[item.kind].slice(1).toLowerCase()
   }))
 
   return (
     <div className='radar'>
+      <ResponsiveContainer width="100%" height="100%">
       <RadarChart
         outerRadius={80}
-        width={258}
-        height={258}
         data={combineData}
       >
-        <PolarGrid stroke="#111" />
-        <PolarAngleAxis dataKey="kind" fill="#111" stroke="#fff" />
-        <PolarRadiusAxis />
+        <PolarGrid gridType="polygon" stroke='#FFFFFF' radialLines={false} />
+        <PolarAngleAxis dataKey="kind" tick={{ fill: "#FFFFFF", fontSize: 12 }}stroke="#none" />
         <Radar
-          name="Mike"
+          name='Perfomance'
           dataKey="value"
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
+          stroke='transparent'
+          fill="#FF0101B2"
+          fillOpacity={0.7}
         />
       </RadarChart>
-    </div>
+    </ResponsiveContainer>
+    </div >
   )
 }

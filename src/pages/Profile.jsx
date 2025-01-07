@@ -36,9 +36,9 @@ export default function Profile() {
     return (
         <div className='profile'>
             <h1>Bonjour, {userData.mainData.userInfos.firstName}</h1>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            <p className='p-main'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             <div className='grid-container'>
-                <div>
+                <div className='main-container'>
                     <AreaChartComponent activity={userData.activity.sessions} />
                     <div className='grid-charts'>
                         <AverageTraining sessions={userData.sessions.sessions} />
@@ -46,7 +46,7 @@ export default function Profile() {
                         <UserKPI score={userData.mainData.todayScore}/>
                     </div>
                 </div>
-                <div>
+                <div className='sidebar'>
                     <ScoreBar score={userData.mainData.keyData} />
                 </div>
 
