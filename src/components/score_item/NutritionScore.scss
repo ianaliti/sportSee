@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 125px;
+    min-height: 125px;
+    min-width: 258px;
     margin: 10px;
 
     img {
@@ -16,6 +17,11 @@
         display: flex;
         align-items: start;
         flex-direction: column;
-        min-width: 120px;
+        min-width: 100px;
+
+        .card-mesure {
+            font-size: 20px;
+            font-weight: 700;
+        }
     }
 }

@@ -18,7 +18,9 @@ export default function UserKPI({ score }) {
     <div className='score-container'>
       <div className='score-label'>Score</div>
       <ResponsiveContainer width="100%" height="100%">
-        <PieChart>
+        <PieChart
+         margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+         >
           <Pie
             data={backgroundData}
             dataKey='value'
@@ -26,8 +28,8 @@ export default function UserKPI({ score }) {
             cy="50%"
             startAngle={180}
             endAngle={-180}
-            innerRadius={80}
-            outerRadius={90}
+            innerRadius="80%"
+            outerRadius="90%"
             fill="#f3f4f6"
           />
           <Pie
@@ -37,9 +39,9 @@ export default function UserKPI({ score }) {
             cy="50%"
             startAngle={180}
             endAngle={-180}
-            innerRadius={80}
-            outerRadius={90}
-            cornerRadius={5}
+            innerRadius="80%"
+            outerRadius="90%"
+            cornerRadius="5%"
           >
             <Cell fill="#ef4444" />
             <Cell fill="transparent" />

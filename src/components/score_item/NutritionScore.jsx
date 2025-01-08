@@ -6,7 +6,7 @@ export default function ScoreItem({ item, icon, name, measure }) {
         <div className='card'>
             <img src={icon} alt="icon" />
             <div className='card-description'>
-                <h2>{item}{measure}</h2>
+                <p className='card-mesure'>{item}{measure}</p>
                 <p>{name}</p>
             </div>
 

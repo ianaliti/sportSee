@@ -1,8 +1,14 @@
 .area-container {
   max-width: 835px;
   max-height: 320px;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.area-container .area-p {
+  position: absolute;
+  left: 20;
+  top: 20;
 }
 
 /*# sourceMappingURL=AreaChart.css.map */
