@@ -2,6 +2,8 @@
   max-width: 835px;
   max-height: 320px;
   position: relative;
+  background-color: #FBFBFB;
+  padding: 15px;
   width: 100%;
   height: 100%;
 }
@@ -9,6 +11,17 @@
   position: absolute;
   left: 20;
   top: 20;
+  font-size: 15px;
+}
+
+.tooltip-chart {
+  background-color: #E60000;
+  padding: 5px 0px;
+  font-size: 7px;
+  color: white;
+}
+.tooltip-chart p {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=AreaChart.css.map */

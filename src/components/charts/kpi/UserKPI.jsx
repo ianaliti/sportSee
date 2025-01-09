@@ -5,14 +5,14 @@ import './UserKPI.css'
 
 export default function UserKPI({ score }) {
 
-  console.log(score)
+  const scorePercentage = score * 100;
 
   const data = [
-    { value: score },
-    { value: 1 - score }
+    { value: scorePercentage },
+    { value: 100 - scorePercentage }
   ];
 
-  const backgroundData = [{ value: 1 }];
+  const backgroundData = [{ value: 100 }];
 
   return (
     <div className='score-container'>
@@ -50,7 +50,7 @@ export default function UserKPI({ score }) {
       </ResponsiveContainer>
 
       <div className='score-text-container'>
-        <div className='score-percentage'>{score}%</div>
+        <div className='score-percentage'>{scorePercentage}%</div>
         <div className='score-subtitle'>de votre</div>
         <div className='score-subtitle'>objectif</div>
       </div>

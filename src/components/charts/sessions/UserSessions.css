@@ -35,4 +35,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.custom-cursor {
+  fill: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=UserSessions.css.map */
