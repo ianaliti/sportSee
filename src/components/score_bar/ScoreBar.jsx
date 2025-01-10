@@ -7,8 +7,6 @@ import protein from '../../assets/icons_scorebar/protein.png'
 
 export default function ScoreBar({ score }) {
 
-    console.log(score)
-
   return (
     <div>
         <NutritionScore item={score.calories.value} icon={calories} name="Calories" measure={score.calories.unit} />
