@@ -15,12 +15,13 @@ export default function Profile() {
     const [error, setError] = useState(null);
     const { userId } = useParams();
 
+    // console.log(userId)
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const cleanUserId = userId.replace(':', '')
-                const data = await getAllUserData(cleanUserId);
-                // console.log('Fetched data:', data); 
+                const data = await getAllUserData(cleanUserId);            
                 setUserData(data)
             } catch (error) {
                 setError(error.message);
@@ -32,6 +33,7 @@ export default function Profile() {
 
     if (error) return <div>Error: {error}</div>;
     if (!userData) return <div>Loading...</div>;
+
 
     return (
         <div className='profile'>

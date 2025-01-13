@@ -261,3 +261,39 @@ export const USER_PERFORMANCE = [
         ]
     }
 ]
+
+export const getUserMain = async (id) => {
+   try {
+		const response = USER_MAIN_DATA.find((user) => user.id === Number(id));
+		return { data: response };
+	} catch (e) {
+		console.log(e);
+	}
+}
+
+export const getUserActivity = async (id) => {
+    try {
+         const response = USER_ACTIVITY.find((user) => user.userId === Number(id));
+         return { data: response };
+     } catch (e) {
+         console.log(e);
+     }
+ }
+
+ export const getUserAverageSession = async (id) => {
+    try {
+         const response = USER_AVERAGE_SESSIONS.find((user) => user.userId === Number(id));
+         return { data: response };
+     } catch (e) {
+         console.log(e);
+     }
+ }
+
+ export const getUserPerformance = async (id) => {
+    try {
+         const response = USER_PERFORMANCE.find((user) => user.userId === Number(id));
+         return { data: response };
+     } catch (e) {
+         console.log(e);
+     }
+ }

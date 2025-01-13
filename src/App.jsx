@@ -9,6 +9,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index path="/user/:userId" element={<Profile />}/>
+        <Route path='*' element={<Profile />}/>
       </Route>
     </Routes>
   )
