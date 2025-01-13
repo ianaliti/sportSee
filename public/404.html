@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      // Redirect unmatched URLs to "/sportSee" with the React router handling the fallback
-      const path = window.location.pathname.replace('/sportSee', '');
-      window.location.replace('/sportSee' + (path || '/'));
-    </script>
+        // Handle client-side routing by redirecting back to index.html
+        var path = window.location.pathname.replace('/sportSee', '');
+        window.location.href = '/sportSee/index.html' + path;
+      </script>
   </head>
   <body></body>
 </html>
