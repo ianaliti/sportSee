@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-        // Handle the React Router redirection
-        var pathname = window.location.pathname.replace('/sportSee', '');
-        window.location.href = '/sportSee/index.html#' + pathname;
+        // Redirect unmatched URLs to "/kasa" with the React router handling the fallback
+        const path = window.location.pathname.replace('/sportSee', '');
+        window.location.replace('/sportSee' + (path || '/'));
       </script>
   </head>
   <body></body>
