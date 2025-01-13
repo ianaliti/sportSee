@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Profile.css'
-import { getAllUserData } from '../services/api';
+import { getAllUserData } from '../../services/api';
 import { useParams } from 'react-router-dom';
-import AreaChartComponent from '../components/charts/activity/AreaChart';
-import ScoreBar from '../components/score_bar/ScoreBar'
-import AverageTraining from '../components/charts/sessions/UserSessions';
-import UserKPI from '../components/charts/kpi/UserKPI';
-import UserPerfomance from '../components/charts/perfomance/UserPerfomance';
+import AreaChartComponent from '../../components/charts/activity/AreaChart';
+import ScoreBar from '../../components/score/score_bar/ScoreBar'
+import AverageTraining from '../../components/charts/sessions/UserSessions';
+import UserKPI from '../../components/charts/kpi/UserKPI';
+import UserPerfomance from '../../components/charts/perfomance/UserPerfomance';
 
 
 export default function Profile() {
@@ -14,8 +14,6 @@ export default function Profile() {
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
     const { userId } = useParams();
-
-    // console.log(userId)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,7 +31,6 @@ export default function Profile() {
 
     if (error) return <div>Error: {error}</div>;
     if (!userData) return <div>Loading...</div>;
-
 
     return (
         <div className='profile'>

@@ -75,7 +75,7 @@ class UserDataModel {
         }));
 
         // Specific order for radar chart
-        const orderedKinds = ['intensity', 'speed', 'strength', 'endurance', 'energy', 'cardio'];
+        const orderedKinds = ['Intensity', 'Speed', 'Strength', 'Endurance', 'Energy', 'Cardio'];
         const orderedData = orderedKinds.map(kind => 
             formattedData.find(item => item.kind === kind)
         );

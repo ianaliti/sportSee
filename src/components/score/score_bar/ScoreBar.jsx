@@ -1,9 +1,9 @@
 import React from 'react'
 import NutritionScore from '../score_item/NutritionScore'
-import calories from '../../assets/icons_scorebar/calories.png'
-import carbs from '../../assets/icons_scorebar/carbs.png'
-import fat from '../../assets/icons_scorebar/fat.png'
-import protein from '../../assets/icons_scorebar/protein.png'
+import calories from '../../../assets/icons_scorebar/calories.png'
+import carbs from '../../../assets/icons_scorebar/carbs.png'
+import fat from '../../../assets/icons_scorebar/fat.png'
+import protein from '../../../assets/icons_scorebar/protein.png'
 
 export default function ScoreBar({ score }) {
 

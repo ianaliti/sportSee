@@ -18,8 +18,8 @@ export default function UserPerfomance({ performance }) {
           cy="50%"
           outerRadius='65%'
           data={performance}
-          startAngle={210}
-          endAngle={570}
+          startAngle={150}
+          endAngle={510}
           margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
         >
           <PolarGrid 
