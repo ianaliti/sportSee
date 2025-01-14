@@ -39,7 +39,7 @@
 }
 @media (max-width: 1024px) {
   .grid-container .sidebar {
-    grid-column: 1/2;
+    grid-columns: 1/2;
   }
 }
 

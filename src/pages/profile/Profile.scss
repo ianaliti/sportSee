@@ -41,7 +41,7 @@
         text-align: center;
 
         @media (max-width: 1024px) {
-            grid-column: 1/2;
+            grid-columns: 1/2;
         }
     }
 }
