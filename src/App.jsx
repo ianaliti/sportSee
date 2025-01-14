@@ -9,7 +9,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<Layout />}>
+      <Route path='/sportSee' element={<Layout />}>
         <Route index element={<Homepage />}/>
         <Route path="user/:userId" element={<Profile />}/>
         <Route path='*' element={<Error />}/>
