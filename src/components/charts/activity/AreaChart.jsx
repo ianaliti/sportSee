@@ -4,11 +4,6 @@ import './AreaChart.css'
 
 export default function AreaChartComponent({ activity }) {
 
-    const data = activity.map((name) => ({
-        'Poids (kg)': name.kilogram,
-        'Calories brûlées (kCal)': name.calories
-    }))
-
     const CustomTooltipChart = ({ active, payload }) => {
         if (active && payload && payload.length) {
             return (
@@ -26,7 +21,7 @@ export default function AreaChartComponent({ activity }) {
             <div className="area-p">Activité quotidienne</div>
             <ResponsiveContainer width={"100%"} height={"100%"}>
                 <BarChart
-                    data={data}
+                    data={activity}
                     margin={{
                         top: 0,
                         right: 30,
@@ -34,7 +29,6 @@ export default function AreaChartComponent({ activity }) {
                         bottom: 5,
                     }}
                     barSize={7}
-
                 >
                     <Legend 
                         verticalAlign="top" 

@@ -38,8 +38,8 @@ class UserDataModel {
             userId: rawActivity.userId,
             sessions: rawActivity.sessions.map(session => ({
                 day: session.day,
-                kilogram: session.kilogram,
-                calories: session.calories
+                'Poids (kg)': session.kilogram,
+                'Calories brûlées (kCal)': session.calories
             }))
         };
     }

@@ -32,6 +32,8 @@ export default function Profile() {
     if (error) return <div>Error: {error}</div>;
     if (!userData) return <div>Loading...</div>;
 
+    console.log(userData)
+    
     return (
         <div className='profile'>
             <div className='user-greeting'>
